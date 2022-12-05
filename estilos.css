@@ -1,0 +1,25 @@
+
+
+#map{
+    border: 5px rgb(250, 13, 13) solid;
+    font-size: 50px;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+#div2{
+    border: 5px rgb(250, 13, 13) solid;
+    font-size: 18px;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.fromControl{
+
+    margin:
+}
+body{
+    background-color:rgb(215, 208, 208);
+}

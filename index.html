@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ultrasit</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<div id="map">
+</div>     
+
+<div id="div2">
+  <form>
+        <label>Nombre</label><input class:"fromControl" type="text"/><br>
+        <br>
+        <textarea name="" id="" cols="30" rows="10"> Descripción</textarea><br>
+        <br>
+        <label>Ubicación</label><input class:"fromCrontrol" type="text"/><br>
+        <br>
+        <button type="button">Aceptar</button>
+        
+
+
+
+  </form>
+</div>
+</body>
+<script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    
+}).addTo(map);
+var marker = L.marker([4.514011485778337, -74.11813752981463]).addTo(map);
+var marker2 = L.marker([4.513578959021572, -74.1190299884913]).addTo(map);
+var marker3 = L.marker([4.512222917594892, -74.1189788799534]).addTo(map);
+var polygon = L.polygon([
+    [4.514011485778337, -74.11813752981463],
+    [4.513578959021572, -74.1190299884913],
+    [4.512222917594892, -74.1189788799534]
+]).addTo(map);
+
+var popup = L.popup()
+    .setLatLng([4.5145, -74.1180])
+    .setContent("Usted esta aqui")
+    .openOn(map);
+
+</script>
+</html>
